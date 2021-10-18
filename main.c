@@ -80,8 +80,8 @@ int main() {
       } while(fscanf(fp, "%[^\n]\n", fend) != EOF);
       fclose(fp);
       fclose(jinx);
-      system("del /f 11i");
-      system("ren tmp_file.txt 11i");
+      system("del /f %s", f_name);
+      system("ren tmp_file.txt %s", f_name);
       if(t_flag_s) {
         printf("[Aluno não encontrado!!]\n [Tente novamente]\n\n");
       } else {
